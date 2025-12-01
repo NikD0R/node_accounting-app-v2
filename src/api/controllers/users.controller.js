@@ -50,6 +50,10 @@ const updateUser = async (req, res) => {
   const { name } = req.body;
   const user = await usersServices.getUserById(+req.params.id);
 
+  if (!name) {
+    return res.sendStatus(400);
+  }
+
   if (!user) {
     return res.sendStatus(404);
   }

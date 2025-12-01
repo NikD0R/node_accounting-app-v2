@@ -53,7 +53,7 @@ const createExpense = async (req, res) => {
     return res.sendStatus(400);
   }
 
-  if (!title || !category || !note || !amount) {
+  if (!title || !category || !note || isNaN(+amount)) {
     return res.sendStatus(400);
   }
 
