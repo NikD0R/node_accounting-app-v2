@@ -1,6 +1,6 @@
 let expenses = [];
 
-function cleanExpensesData(params) {
+function cleanExpensesData() {
   return (expenses = []);
 }
 
